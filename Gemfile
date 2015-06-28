@@ -33,6 +33,7 @@ group :doc do
 end
 
 gem 'omniauth'
+gem 'omniauth-pocket'
 gem 'settingslogic'
 
 # Use ActiveModel has_secure_password
