@@ -1,14 +1,37 @@
- <% if current_user %>
- <% @items.each do |item| %>
- 	<div class="row">
-	 	<div class="col-xs-11"><a href="<%= item["resolved_url"] %>" target="_blank"><%= title(item) %></a></div>
-	 	<%= item["twitter"] %>
-	 	<div class="col-xs-1"><a href="#" class="check" data-item-id="<%=item["item_id"] %>"><i class="fa fa-check"></i></a></div>
+<div class="container theme-showcase">
+<!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Explore, your pocket.</h1>
+        <p>Let's explore in your pocekt what has various unread items once you interested in.</p>
+        <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+      </div>
 
- 	</div>
- 	
-<% end %>
-<%= current_user.name %>  <%= link_to 'ログアウト', logout_path %>
+ <% if current_user %>
+ 	<div class="row">
+ 	<% @items.each_with_index do |item, i| %>
+        <% if i%3==0 %>
+        <div class="col-sm-4">  
+        <% end %>
+
+          <div class="panel panel-danger">
+            <div class="panel-heading">
+              <h3 class="panel-title"><a href="<%= item["resolved_url"] %>" target="_blank"><%= title(item) %>
+              <span class="badge"><%= item["twitter"] %></span></a></h3>
+            </div>
+            <div class="panel-body">
+              This is example text for summary of this article.
+ 				This text will be replaced in next patch.
+ 				Social count of Twitter is <%= item["twitter"] %>Panel content
+ 				<span class="label label-primary"><%=item["pocket"] %></span>
+            </div>
+          </div>
+        <% if i%3==2 %>
+        </div>
+        <% end %>
+	<% end %>
+	</div>
+	<%= current_user.name %>  <%= link_to 'ログアウト', logout_path %>
  <% else %>
  	<%= link_to 'ログイン', '/auth/pocket' %>
  <% end %>
+</div>

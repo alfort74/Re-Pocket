@@ -3,7 +3,7 @@ module ApplicationHelper
 		@current_user ||= User.find(session[:user_id]) if session[:user_id]
 	end
 
-	TITLE_LENGTH = 64
+	TITLE_LENGTH = 40
 
 	def title(item)
 		title = item["given_title"]
