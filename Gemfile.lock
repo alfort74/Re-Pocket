@@ -74,6 +74,7 @@ GEM
     omniauth-pocket (0.1.0)
       omniauth (~> 1.0)
       omniauth-oauth2 (~> 1.0)
+    parallel (1.6.0)
     pocket-ruby (0.0.5)
       faraday (>= 0.7, < 0.9)
       faraday_middleware (~> 0.8)
@@ -105,6 +106,10 @@ GEM
       sass (~> 3.2.2)
       sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
+    scouter (0.0.7)
+      hashie
+      parallel
+      thor
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
@@ -144,6 +149,7 @@ DEPENDENCIES
   pocket-ruby (= 0.0.5)
   rails (= 4.0.5)
   sass-rails (~> 4.0.2)
+  scouter
   sdoc
   settingslogic
   sqlite3
