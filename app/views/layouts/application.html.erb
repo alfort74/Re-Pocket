@@ -8,12 +8,6 @@
 </head>
 <body>
 
- <% if current_user %>
- 	<%= current_user.name %>  <%= link_to 'ログアウト', logout_path %>
- <% else %>
- 	<%= link_to 'ログイン', '/auth/pocket' %>
- <% end %>
-
 <%= yield %>
 
 </body>

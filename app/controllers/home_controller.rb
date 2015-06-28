@@ -1,4 +1,4 @@
-class HomeController < BaseController
+class HomeController < ApplicationController
   def index
   	if session[:token]
   		client = Pocket.client(:access_token => session[:token])
