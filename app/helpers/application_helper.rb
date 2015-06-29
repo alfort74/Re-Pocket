@@ -16,4 +16,17 @@ module ApplicationHelper
 			title
 		end
 	end
+
+	ARTICLE_LENGTH = 90
+
+	def article(item)
+		article = item["excerpt"]
+		article = "no article" if article.empty?
+
+		if article.length > ARTICLE_LENGTH
+			article[0..(ARTICLE_LENGTH-3)] + "..."
+		else
+			title
+		end
+	end
 end

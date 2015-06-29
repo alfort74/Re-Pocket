@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   def index
   	if session[:token]
   		client = Pocket.client(:access_token => session[:token])
-  		info = client.retrieve(:detailType => :simple, :favorite => 1)
+  		info = client.retrieve(:detailType => :complete)
   		@items = info["list"].to_a.sort_by{ rand }.take(9).map{|v| v[1]}
   		@items.each do |item|
   			results, errors = Scouter.get_count(item["resolved_url"])

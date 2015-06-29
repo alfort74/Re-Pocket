@@ -34,6 +34,7 @@ end
 
 gem 'omniauth'
 gem 'omniauth-pocket'
+gem 'figaro'
 gem 'settingslogic'
 
 gem 'pocket-ruby', '0.0.5'
