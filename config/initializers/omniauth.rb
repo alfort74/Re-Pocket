@@ -1,3 +1,3 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
-	provider :pocket, ENV['CONSUMER_KEY']#Settings.pocket.consumer_key
+	provider :pocket, Settings.pocket.consumer_key	#ENV['CONSUMER_KEY']
 end
