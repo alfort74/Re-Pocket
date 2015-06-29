@@ -50,7 +50,7 @@ gem 'execjs'
 gem 'less-rails'
 
 group :production do
-	# gem 'pg'
+	gem 'pg'
 	gem 'rails_12factor', '0.0.2'
 end
 

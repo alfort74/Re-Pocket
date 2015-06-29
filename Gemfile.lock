@@ -86,6 +86,7 @@ GEM
       omniauth (~> 1.0)
       omniauth-oauth2 (~> 1.0)
     parallel (1.6.0)
+    pg (0.18.2)
     pocket-ruby (0.0.5)
       faraday (>= 0.7, < 0.9)
       faraday_middleware (~> 0.8)
@@ -175,6 +176,7 @@ DEPENDENCIES
   less-rails
   omniauth
   omniauth-pocket
+  pg
   pocket-ruby (= 0.0.5)
   rails (= 4.0.5)
   rails_12factor (= 0.0.2)
