@@ -4,7 +4,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.5'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :development do
+	# gem 'sqlite3'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -47,6 +49,9 @@ gem 'twitter-bootswatch-rails-helpers'
 gem 'execjs'
 gem 'less-rails'
 
+group :production do
+	gem 'rails_12factor', '0.0.2'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
