@@ -10,3 +10,5 @@ test:
 
 production:
   <<: *defaults
+    pocket:
+    consumer_key: 34336-c3940a25d7121dfa38da096a
